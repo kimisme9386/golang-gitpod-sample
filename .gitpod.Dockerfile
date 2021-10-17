@@ -10,8 +10,8 @@ USER gitpod
 
 COPY ./.gitpod/oh-my-zsh.sh ./.gitpod/oh-my-zsh.sh
 
-# Install Oh-My-Zsh and setup zsh
-RUN sudo chmod +x ./.gitpod/oh-my-zsh.sh && ./.gitpod/oh-my-zsh.sh
+# Install Oh-My-Zsh glide and setup zsh 
+RUN sudo chmod +x ./.gitpod/oh-my-zsh.sh && ./.gitpod/oh-my-zsh.sh && brew install glide
 
 # install aws cdk && aws-cli v2
 RUN npm i -g aws-cdk && \
